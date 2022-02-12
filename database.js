@@ -1,5 +1,4 @@
 var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb+srv://gandi:diocane@traduttore.zveua.mongodb.net/gandi?retryWrites=true&w=majority";
 
 let connection;
 
