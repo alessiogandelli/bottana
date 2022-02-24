@@ -37,8 +37,7 @@ async function main(){
 
 
 function startbot(ctx){
-    ctx.reply('che lingua vuoi tradurre? /francese /inglese /cinese /giapponese /portoghese /russo /tedesco /spagnolo') 
-
+    ctx.reply('che lingua vuoi tradurre? \n/francese\n/inglese\n/cinese\n/giapponese\n/portoghese\n/russo\n/tedesco\n/spagnolo') 
 
 }
 
