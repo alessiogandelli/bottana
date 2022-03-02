@@ -62,7 +62,12 @@ async function setLanguage(ctx, lang){
 
 
 async function traduci(ctx){
-    let id = ctx.message.from.id
+    let id = 0
+    try{
+        id = ctx.message.from.id
+    }catch(error){
+        console.log('si rompe qui')
+    }
 
     lingua = (await database.getCollection('users').findOne({'username':ctx.message.from.username}))?.lingua
 
@@ -78,10 +83,15 @@ async function traduci(ctx){
           })
           .then(result => {
              // ctx.reply(result.data.translations[0].text);
-             bot.telegram.sendMessage(id, ctx.message.text +'\n\n' + result.data.translations[0].text)
+             try{
+                bot.telegram.sendMessage(id, ctx.message.text +'\n\n' + result.data.translations[0].text)
+             }catch(error){
+                 console.log('rotta')
+             }
           })
           .catch(error => {
-              console.error(error)
+              //console.error(error)
+              console.log('problemi ')
           });
     }
 
