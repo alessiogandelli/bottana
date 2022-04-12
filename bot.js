@@ -24,6 +24,7 @@ async function main(){
     bot.command('/portoghese', (ctx) => setLanguage(ctx, "PT-BR"))
     bot.command('/russo', (ctx) => setLanguage(ctx, "RU"))
     bot.command('/tedesco', (ctx) => setLanguage(ctx, "DE"))
+    bot.command('/italiano', (ctx) => setLanguage(ctx, "IT"))
 
 
     bot.on('message',(ctx) => traduci(ctx))
@@ -37,7 +38,7 @@ async function main(){
 
 
 function startbot(ctx){
-    ctx.reply('che lingua vuoi tradurre? \n/francese\n/inglese\n/cinese\n/giapponese\n/portoghese\n/russo\n/tedesco\n/spagnolo') 
+    ctx.reply('che lingua vuoi tradurre? \n/francese\n/inglese \n/italiano\n/cinese\n/giapponese\n/portoghese\n/russo\n/tedesco\n/spagnolo') 
 
 }
 
